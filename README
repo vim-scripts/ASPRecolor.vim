@@ -1,0 +1,10 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=564
+
+I edit ASP code a lot.  There's usually three different langauges in the same file: HTML, Vbscript, and Javascript.  The ASPVBS filetype plugin handles this well, including the syntaxes from all three types, but it gets hard for me to distinguish them on the screen.  I wanted to assign different background colors to the different regions - but they're all highlight links, so if I change, say, Comment, then all of HTMLComment, AspVBSComment, and javascriptComment will all change too.
+
+This plugin changes that.  After an ASPVBS buffer is loaded, it recolors every ASP and javascript syntax item with a new background color - by retrieving the underlying linked highlight definition and redefining the specific highlight item.  ASP becomes dramatically easier to read. See the included file compare.asp.html (also here: http://member.newsguy.com/~rpresser/compare.asp.html).
+
+Requires the MultVals plugin <http://www.vim.org/scripts/script.php?script_id=171&gt; for array handling.
+
+This technique could be applicable to other kinds of files that have multiple languages in them, like HTML/CSS, or C++ with embedded SQL, or maybe even someday XML.
+
